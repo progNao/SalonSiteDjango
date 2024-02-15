@@ -1,0 +1,17 @@
+{% now "Y" as current_year %}
+{% now "m" as current_month %}
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+</head>
+<header>
+    <aside id="mainimg"><img src="{% static 'images/mainimg.jpg' %}"></aside>
+</header>
+<nav id="menubar">
+    <ul>
+    <li><a href="{% url 'salon:top' %}">トップ</a></li>
+    <li><a href="{% url 'salon:course' %}">コース一覧</a></li>
+    <li><a href="{% url 'salon:reservation' %}">コース予約</a></li>
+    <li><a href="{% url 'salon:month' year=current_year month=current_month %}">予約状況</a></li>
+    </ul>
+</nav>

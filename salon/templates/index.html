@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>トップページ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+
+    <body>
+        {% if messages %}
+            <div class="messages" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div id="container">
+            {% include 'header.html' %}
+            <div id="contents">
+                <div class="box">
+                    <div class="text">
+                        <h3>コンテンツタイトルが入るよ</h3>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                    </div>
+                    <div class="pict"><img src="{% static 'images/mock1.png' %}"></div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h3>コンテンツタイトルが入るよ</h3>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                    </div>
+                    <div class="pict"><img src="{% static 'images/mock1.png' %}"></div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h3>コンテンツタイトルが入るよ</h3>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                        <p>コンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよコンテンツの文章が入るよ</p>
+                    </div>
+                    <div class="pict"><img src="{% static 'images/mock1.png' %}"></div>
+                </div>
+            </div>
+            {% include 'footer.html' %}
+        </div>
+    </body>
+</html>

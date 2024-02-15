@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	-webkit-text-size-adjust: none;
+	color: #666;	/*全体の文字色*/
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 16px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	background: #fff;	/*背景色*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,select,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*ヘッダー（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------*/
+/*headerブロック*/
+header {
+	text-align: center;	/*内容を中央よせ*/
+	padding: 30px;
+}
+
+/*トップページのメイン画像
+---------------------------------------------------------------------------*/
+/*画像ブロック*/
+#mainimg img {
+	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
+	width: 1616px;
+	height: 347px;
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニュー全体を囲むブロック*/
+#menubar {
+	text-align: center;		/*文字をセンタリング*/
+	font-size: 20px;		/*文字サイズ*/
+	background: #0d99ff;
+	border-radius: 5px;
+}
+/*メニュー１個あたりの設定*/
+#menubar li {
+	display: inline;	/*横並びにする設定*/
+}
+#menubar li a {
+	text-decoration: none;
+	padding: 15px 100px;	/*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+	color: white;
+}
+/*マウスオン時の設定*/
+#menubar li a:hover {
+	color: red;	/*文字色*/
+}
+
+/*画面幅580px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:580px){
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	font-size: 12px;	/*文字サイズ*/
+	line-height: 1.5;	/*行間*/
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニュー１個あたりの設定*/
+#menubar li {
+	display: block;	/*縦並びにする設定*/
+	margin-bottom: 10px;
+}
+#menubar li a {
+	text-decoration: none;
+	padding: 8px 30px;	/*各メニュー内の余白。*/
+}
+}
+
+@media (max-width:768px) {
+}

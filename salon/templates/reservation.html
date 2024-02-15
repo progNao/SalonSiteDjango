@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>コース予約</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'reservation.css' %}">
+    </head>
+
+    <body>
+      {% if messages %}
+        <div class="messages" role="alert">
+          {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+        </div>
+      {% endif %}
+        <div id="container">
+          {% include 'header.html' %}
+            <div id="contents">
+              <div class="input-form">
+                <form action="{% url 'salon:reservation' %}" method="POST">
+                  {% csrf_token %}
+                  <table class="form-table">
+                    <tr>
+                      <th>予約者名</th>
+                      <td>{{ form.reserver_name }}</td>
+                    </tr>
+                    <tr>
+                      <th>メールアドレス</th>
+                      <td>{{ form.email }}</td>
+                    </tr>
+                    <tr>
+                      <th>電話番号</th>
+                      <td>{{ form.tel }}</td>
+                    </tr>
+                    <tr>
+                      <th>予約日時</th>
+                      <td>{{ form.reservation_date }}</td>
+                    </tr>
+                    <tr>
+                      <th>コース</th>
+                      <td>{{ form.course_id }}</td>
+                    </tr>
+                  </table>
+                  <br />
+                  <button class="btn btn-layout" type="submit">予約確定</button>
+                </form>
+              </div>
+            </div>
+            {% include 'footer.html' %}
+        </div>
+    </body>
+</html>
